@@ -94,6 +94,13 @@
       - python-pip
   when: mongodb_pymongo_from_pip | bool
 
+- name: Install PIP3
+  apt:
+    pkg:
+      - python3-pip
+  when: mongodb_pymongo_from_pip | bool and
+      ansible_python_interpreter is search( ".*/python3" )
+
 - name: Install setuptools (required for ansible 2.7+)
   apt:
     pkg:
