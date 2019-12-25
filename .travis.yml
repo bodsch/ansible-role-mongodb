@@ -8,6 +8,12 @@ python:
 env:
   - >
     DISTRIBUTION=ubuntu
+    DIST_VERSION=19_04-builded
+    MONGODB_VERSION=4.2
+    MONGODB_PACKAGE=mongodb-org
+    DOCKER_PRIVILEGED=true
+  - >
+    DISTRIBUTION=ubuntu
     DIST_VERSION=18_04-builded
     MONGODB_VERSION=4.2
     MONGODB_PACKAGE=mongodb-org
